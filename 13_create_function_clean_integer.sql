@@ -1,0 +1,4 @@
+CREATE FUNCTION clean_integer(val INT) 
+RETURNS INT AS $$
+  SELECT COALESCE(val, -999999);
+$$ LANGUAGE sql;
